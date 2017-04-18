@@ -1,0 +1,40 @@
+/*
+	Joshua Shackelford
+	CSE 154 AC
+	TA: Tore Hanssen
+		This is the CSS style sheet for the fifteen tile puzzle game.
+*/
+
+body {
+	text-align: center;
+	font-family: cursive;
+	font-size: 14pt;
+}
+
+#puzzlearea {
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 400px;
+	position: relative; /*Makes the puzzle tiles position relative to this area*/
+}
+
+.squares {
+	position: absolute;
+	vertical-align: bottom; /*Removes default spacing between squares so that they sit right
+							  next to one another*/
+	font-size: 40pt;
+	text-align: center;
+	width: 90px;
+	height:90px;
+	border: 5px solid black;
+	display: inline-block;
+}
+
+/*form contorls do not inherit styles from the body, and so they must be
+  explicitly given again in order to override the defaults*/
+button { 
+	font-family: cursive;
+	font-size: 14pt;
+}
