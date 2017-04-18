@@ -1,0 +1,74 @@
+	<!--
+	Joshua Shackelford
+	CSE 154, AC
+	TA: Tore Hanssen
+		This is the html page for the speedreader webpage. It contains all of the buttons and
+		selectors that the user will interact with, including the start and stop buttons and the
+		text field in which the user will place the text they wish to speed read.
+	-->
+
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>SpeedReader</title>
+			<link rel="stylesheet" type="text/css" href="speedreader.css" />
+			<script src="speedreader.js" type="text/javascript"></script>
+		</head>
+		
+		<body>
+			<h1>SpeedReader</h1>
+
+			<!--This div is given content by the JavaScript-->
+			<div id="display"></div>
+
+			<!--div containing all the user interactive elements-->
+			<div id="gui">
+				<div id="options"> 
+					<fieldset>
+						<legend>Play Controls</legend>	
+						<button id="start">Start</button>
+						<button id="stop">Stop</button>
+					</fieldset>
+
+					<!--Selector for the speed at which words apear on the page. The values correspond
+						to the speed that frames pass in miliseconds-->
+					<fieldset>
+						<legend>Speed</legend>
+						<select id="speed">
+							<option value="300">200 wpm</option>
+							<option value="200">300 wpm</option>
+							<option value="171" selected="selected">350 wpm</option>
+							<option value="150">400 wpm</option>
+							<option value="133">450 wpm</option>
+							<option value="120">500 wpm</option>
+						</select>
+					</fieldset>
+
+					<!--Selector for the text size of the display, the values correspond to the fontsize
+						that the user will see.-->
+					<fieldset>
+						<legend>Size</legend>
+						<label><input type="radio" name="size" checked="checked" value="36">Medium</label>
+						<label><input type="radio" name="size" value="48">Big</label>
+						<label><input type="radio" name="size" value="60">Bigger</label>
+					</fieldset>
+				</div>
+				<br /> <!--Placed here to keep the final fieldset on its own line
+							as fieldsets on the page are displayed as inline elements by CSS-->
+				<!--contains the text field in which the user will place the text to be read-->
+				<div id="usertext">
+					<fieldset>
+						<legend>Input Text</legend>
+						<textarea id="input" rows="10" cols="80"></textarea>
+					</fieldset>
+				</div>
+			</div>
+
+			<!--The three links to the HTML and CSS validators as well as JSLint-->
+			<div id="links">
+				<a href="https://webster.cs.washington.edu/validate-html.php"><img src="https://webster.cs.washington.edu/images/w3c-html-blue.png" alt="html validator"></a>
+				<a href="https://webster.cs.washington.edu/validate-css.php"><img src="https://webster.cs.washington.edu/images/w3c-css-blue.png" alt="css validator"></a>
+				<a href="https://webster.cs.washington.edu/jslint/?referer"><img src="https://webster.cs.washington.edu/images/w3c-js-blue.png" alt="JSLint"></a>
+			</div>
+		</body>
+	</html>
